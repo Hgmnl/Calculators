@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card dark">
+      <div class="theme-toggler active">
+        <i class="toggler-icon"></i>
+      </div>
+      <form class="display">
+        <input id="screen" placeholder="0" />
+      </form>
+      <section class="button">
+        <div class="tombol-kiri">
+          <button class="tombol" onclick="display('backspace')"><</button>
+          <button class="tombol" onclick="display('*')">&times;</button>
+          <button class="tombol" onclick="display('5')">5</button>
+          <button class="tombol" onclick="display('6')">6</button>
+          <button class="tombol" onclick="display('0')">0</button>
+          <button class="tombol" onclick="display('1')">1</button>
+          <button class="tombol" onclick="display('00')">00</button>
+          <button class="tombol" onclick="display('.')">.</button>
+          <button class="tombol" onclick="display('del')">Del</button>
+          <button class="tombol" onclick="display('(')">(</button>
+          <button class="tombol-kuadrat" onclick="display('Kuadrat')">
+            ×²
+          </button>
+        </div>
+        <div class="tombol-tengah">
+          <button class="tombol" onclick="display('/')">/</button>
+          <button class="tombol" onclick="display('7')">7</button>
+          <button class="tombol" onclick="display('2')">2</button>
+          <button class="tombol" onclick="display(',')">,</button>
+          <button class="tombol-percent" onclick="display('%')">%</button>
+        </div>
+        <div class="tombol-kanan">
+          <button class="tombol" onclick="display('backspace')">></button>
+          <button class="tombol" onclick="display('allclear')">AC</button>
+          <button class="tombol" onclick="display('8')">8</button>
+          <button class="tombol" onclick="display('9')">9</button>
+          <button class="tombol" onclick="display('3')">3</button>
+          <button class="tombol" onclick="display('4')">4</button>
+          <button class="tombol" onclick="display('-')">-</button>
+          <button class="tombol" onclick="display('+')">+</button>
+          <button class="tombol" onclick="display(')')">)</button>
+          <button class="tombol-action" onclick="display('action')">=</button>
+          <button class="tombol-akar" onclick="display('√()')">√×</button>
+        </div>
+      </section>
+      <center>
+        <a type="button" style="color: black" onclick="return window.print();"
+          >Cetak</a
+        >
+      </center>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

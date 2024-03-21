@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+  outline: 0;
+  transition: all 0.8s ease;
+}
+
+body {
+  font-family: "Gloria Hallelujah", cursive;
+  background-image: url(img/bg.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.card {
+  position: relative;
+  background-color: aliceblue;
+  width: 300px;
+  height: 580px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px red, 2px 5px 12px rgb(0, 0, 0, 0.18);
+  display: flex;
+  place-items: center;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  color: aliceblue;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.theme-toggler.active {
+  color: #8b4513;
+}
+
+.theme-toggler.active::before {
+  background-color: #8b4513;
+}
+
+.theme-toggler::before {
+  content: "";
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: aliceblue;
+  z-index: -1;
+}
+
+.display {
+  margin: 0 10px;
+  background-color: aliceblue;
+  height: 30%;
+  width: 100%;
+  max-width: 270px;
+  border-radius: 20px;
+  box-shadow: inset 2px 3px 12px rgb(0, 0, 0, 0.18), 0 0 20px aliceblue;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.display input {
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  font-size: 28px;
+  width: 100%;
+  outline: none;
+}
+
+.button {
+  height: 80%;
+  display: flex;
+  width: 100%;
+  border: 0;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.tombol {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.card button:active {
+  background: #3fb399;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #3fb399;
+  color: aliceblue;
+}
+
+.tombol:hover {
+  transform: scale(1.1);
+}
+
+.tombol-kiri {
+  width: 45%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tombol-tengah {
+  width: 28%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.tombol-kanan {
+  width: 55%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tombol-action {
+  background-color: #8b4513;
+  box-shadow: inset 2px 5px 12px #8b4513, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.card button.tombol-action:active {
+  background: aliceblue;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #8b4513;
+  color: #8b4513;
+}
+
+.tombol-action:hover {
+  transform: scale(1.1);
+}
+
+.tombol-kuadrat {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  border: none;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: aliceblue;
+  grid-column: span 2;
+}
+
+.card button.tombol-kuadrat:active {
+  background: #8b4513;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #8b4513;
+  color: aliceblue;
+}
+
+.tombol-kuadrat:hover {
+  transform: scale(1.1);
+}
+
+.tombol-percent {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  border: none;
+  height: 112px;
+  width: 80%;
+  border-radius: 30px;
+  cursor: pointer;
+  color: aliceblue;
+  grid-column: span 2;
+}
+
+.card button.tombol-percent:active {
+  background: #8b4513;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #8b4513;
+  color: aliceblue;
+}
+
+.tombol-percent:hover {
+  transform: scale(1.1);
+}
+
+.tombol-akar {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  border: none;
+  height: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  color: aliceblue;
+  grid-column: span 2;
+}
+
+.card button.tombol-akar:active {
+  background: #8b4513;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #8b4513;
+  color: aliceblue;
+}
+
+.tombol-akar:hover {
+  transform: scale(1.1);
+}
+
+/* light theme */
+
+.card {
+  background-color: #8b4513;
+}
+
+.card .tombol {
+  background-color: aliceblue;
+  box-shadow: inset 2px 5px 12px aliceblue, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: #6495ed;
+}
+
+.card .tombol-action {
+  background-color: red;
+  box-shadow: inset 2px 5px 12px red, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card button.tombol-action:active {
+  background: aliceblue;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px aliceblue;
+  color: #8b4513;
+}
+
+.card .tombol-kuadrat {
+  background-color: aliceblue;
+  box-shadow: inset 2px 5px 12px aliceblue, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: #6495ed;
+}
+
+.card button.tombol-kuadrat:active {
+  background: #3fb399;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #3fb399;
+  color: aliceblue;
+}
+
+.card .tombol-percent {
+  background-color: aliceblue;
+  box-shadow: inset 2px 5px 12px aliceblue, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: #6495ed;
+}
+
+.card button.tombol-percent:active {
+  background: #3fb399;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #3fb399;
+  color: aliceblue;
+}
+
+.card .tombol-akar {
+  background-color: aliceblue;
+  box-shadow: inset 2px 5px 12px aliceblue, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: #6495ed;
+}
+
+.card button.tombol-akar:active {
+  background: #3fb399;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #3fb399;
+  color: aliceblue;
+}
+
+/* dark theme */
+
+.card.dark {
+  background-color: aliceblue;
+}
+
+.card.dark .tombol {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card.dark button:active {
+  background: #8b4513;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px #8b4513;
+  color: aliceblue;
+}
+
+.card.dark .tombol-kuadrat {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card.dark .tombol-percent {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card.dark .tombol-akar {
+  background-color: #3fb399;
+  box-shadow: inset 2px 5px 12px #3fb399, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card.dark .tombol-action {
+  background-color: #8b4513;
+  box-shadow: inset 2px 5px 12px #8b4513, 5px 12px 20px rgb(0, 0, 0, 0.18);
+  color: aliceblue;
+}
+
+.card.dark button.tombol-action:active {
+  background: aliceblue;
+  box-shadow: 5px 12px 20px rgb(0, 0, 0, 0.18), 2px 12px 20px red;
+  color: red;
+}
